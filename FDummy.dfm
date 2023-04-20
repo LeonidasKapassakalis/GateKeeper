@@ -1,0 +1,37 @@
+object frmDummy: TfrmDummy
+  Left = 0
+  Top = 0
+  AutoSize = True
+  BorderIcons = []
+  BorderStyle = bsToolWindow
+  Caption = 'frmDummy'
+  ClientHeight = 25
+  ClientWidth = 60
+  Color = clHighlightText
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  GlassFrame.SheetOfGlass = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 0
+    Top = 0
+    Width = 60
+    Height = 25
+    Align = alCustom
+    Alignment = taCenter
+    Caption = 'Label1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+end

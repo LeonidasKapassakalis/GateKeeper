@@ -1,0 +1,2 @@
+inherited DMStationSubs: TDMStationSubs
+end

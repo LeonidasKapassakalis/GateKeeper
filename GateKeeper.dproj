@@ -1,0 +1,858 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{C8B06256-A752-4250-A10F-95A66828BBCE}</ProjectGuid>
+			<MainSource>GateKeeper.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>13.4</ProjectVersion>
+			<FrameworkType>VCL</FrameworkType>
+			<Base>True</Base>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>3</TargetedPlatforms>
+			<AppType>Application</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+			<Cfg_1_Win64>true</Cfg_1_Win64>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+			<Cfg_2_Win64>true</Cfg_2_Win64>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<VCL_Custom_Styles>&quot;Emerald Light Slate|VCLSTYLE|$(ALLUSERSPROFILE)\Documents\RAD Studio\9.0\Styles\EmeraldLightSlate.vsf&quot;</VCL_Custom_Styles>
+			<Icon_MainIcon>AvinPratOmnis_Icon.ico</Icon_MainIcon>
+			<Manifest_File>None</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<VerInfo_MajorVer>2</VerInfo_MajorVer>
+			<VerInfo_Keys>CompanyName=Avin;FileDescription=;FileVersion=2.0.0.0;InternalName=Avin;LegalCopyright=Avin Oil;LegalTrademarks=Avin Oil;OriginalFilename=;ProductName=AvinSinpStat;ProductVersion=1.0.0.0;Comments=Sinp Stat</VerInfo_Keys>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;FMXTee;Bde;Data.Win;System.Win;$(DCC_Namespace)</DCC_Namespace>
+			<BRCC_IncludePath>C:\Program Files\Embarcadero\Components\Delphi2010\ComponsSyn;C:\Program Files\Embarcadero\Components\Delphi2010\LeoSapAdobe.dpk_Lib;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<DCC_UsePackage>Vcl50;Vclx50;VclSmp50;Vcldb50;vclado50;ibevnt50;Vclbde50;vcldbx50;qrpt50;TeeUI50;TeeDB50;Tee50;Dss50;TeeQR50;VCLIB50;Vclmid50;vclie50;Inetdb50;Inet50;NMFast50;webmid50;dclocx50;dclaxserver50;dclusrsyn50;SynPackD;SynPack;rtl;dbrtl;bindcomp;bindcompfmx;fmx;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+			<DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+			<DCC_DependencyCheckOutputName>AvinPratOmnis.exe</DCC_DependencyCheckOutputName>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_PentiumSafeDivide>true</DCC_PentiumSafeDivide>
+			<DCC_UnitSearchPath>C:\Program Files\Embarcadero\Components\ComponsSyn;C:\Program Files\Embarcadero\Components\LeoSapAdobe.dpk_Lib;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_K>false</DCC_K>
+			<DCC_F>false</DCC_F>
+			<DCC_S>false</DCC_S>
+			<DCC_N>true</DCC_N>
+			<DCC_E>false</DCC_E>
+			<DCC_WriteableConstants>true</DCC_WriteableConstants>
+			<DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<DCC_UsePackage>vclx;vcl;vcldb;vclimg;QR506RunDXE2W64;vclactnband;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_Namespace>Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<DCC_UsePackage>EhLib160;EhLibDataDrivers160;vclx;vcl;vcldb;vclimg;QR506RunDXE2W64;rRwCommon160;vclactnband;dclExcelExportPackXE2;QRD_DXE2;SvDBEditFinder6;FMXTeeLanguage916;FMXTeePro916;FmxTeeUI916;FMXTeeDB916;FMXTee916;FMITeeLanguage916;FMITeePro916;FmiTeeUI916;FMITeeDB916;FMITee916;TeeDB916;Tee9QR5D16;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_Namespace>Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_MinorVer>1</VerInfo_MinorVer>
+			<Icon_MainIcon>GateKeeper_Icon1.ico</Icon_MainIcon>
+			<VerInfo_MajorVer>1</VerInfo_MajorVer>
+			<DCC_AssertionsAtRuntime>false</DCC_AssertionsAtRuntime>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=AvinOil ;FileDescription=GateControl;FileVersion=1.1.0.0;InternalName=GateControl;LegalCopyright=MOH;LegalTrademarks=;OriginalFilename=;ProductName=GateControl;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_MapFile>3</DCC_MapFile>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_Release>1</VerInfo_Release>
+			<Icon_MainIcon>GateKeeper_Icon.ico</Icon_MainIcon>
+			<VerInfo_PreRelease>true</VerInfo_PreRelease>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<VerInfo_MajorVer>1</VerInfo_MajorVer>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=MOH;FileDescription=LpcGate;FileVersion=1.0.1.0;InternalName=LpcGate;LegalCopyright=MOH;LegalTrademarks=;OriginalFilename=;ProductName=LpcGate;ProductVersion=4.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="about.pas">
+				<Form>AboutBox</Form>
+			</DCCReference>
+			<DCCReference Include="DBase.pas">
+				<Form>DMBase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Globals.pas"/>
+			<DCCReference Include="FSubParams.pas">
+				<Form>frmSubParams</Form>
+			</DCCReference>
+			<DCCReference Include="DMain.pas">
+				<Form>DMMain</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSubParams.pas">
+				<Form>DMSubParams</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FFilter.pas">
+				<Form>frmFilter</Form>
+			</DCCReference>
+			<DCCReference Include="RSubParams.pas">
+				<Form>RptSubParams</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FPasswordDlg.pas">
+				<Form>frmPasswordDlg</Form>
+			</DCCReference>
+			<DCCReference Include="FMain.pas">
+				<Form>frmMain</Form>
+			</DCCReference>
+			<DCCReference Include="FTableIds.pas">
+				<Form>FrmTableIds</Form>
+			</DCCReference>
+			<DCCReference Include="FGParams.pas">
+				<Form>frmGParams</Form>
+			</DCCReference>
+			<DCCReference Include="FSplash.pas">
+				<Form>frmSplash</Form>
+			</DCCReference>
+			<DCCReference Include="FSearch.pas">
+				<Form>frmSearch</Form>
+			</DCCReference>
+			<DCCReference Include="FSearchDisplay.pas">
+				<Form>frmSearchDisplay</Form>
+			</DCCReference>
+			<DCCReference Include="FBaseSearch.pas">
+				<Form>frmBaseSearch</Form>
+			</DCCReference>
+			<DCCReference Include="FDialogWEdit.pas">
+				<Form>FrmDialogWEdit</Form>
+			</DCCReference>
+			<DCCReference Include="RBaseAdo.pas">
+				<Form>rptBaseAdo</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FCall.pas">
+				<Form>frmCall</Form>
+			</DCCReference>
+			<DCCReference Include="FBForm.pas">
+				<Form>frmBForm</Form>
+			</DCCReference>
+			<DCCReference Include="RBase.pas">
+				<Form>rptBase</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FBEnForm.pas">
+				<Form>frmBEnForm</Form>
+			</DCCReference>
+			<DCCReference Include="FDefineQOrder.pas">
+				<Form>frmDefineQOrder</Form>
+			</DCCReference>
+			<DCCReference Include="FFilterEn.pas">
+				<Form>frmFilterEn</Form>
+			</DCCReference>
+			<DCCReference Include="FDispImage.pas">
+				<Form>frmDispImage</Form>
+			</DCCReference>
+			<DCCReference Include="RImage.pas">
+				<Form>repImage</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FSubParamsNo.pas">
+				<Form>frmSubParamsNo</Form>
+			</DCCReference>
+			<DCCReference Include="FSubParamsNoEh.pas">
+				<Form>frmSubParamsNoEh</Form>
+			</DCCReference>
+			<DCCReference Include="FFilterEn2.pas">
+				<Form>frmFilterEn2</Form>
+			</DCCReference>
+			<DCCReference Include="FSearch2.pas">
+				<Form>frmSearch2</Form>
+			</DCCReference>
+			<DCCReference Include="FBEnFormQ.pas">
+				<Form>frmBEnFormQ</Form>
+			</DCCReference>
+			<DCCReference Include="FLUpOnom.pas">
+				<Form>frmLUpOnom</Form>
+			</DCCReference>
+			<DCCReference Include="FSearchDev2.pas">
+				<Form>frmSearchDev2</Form>
+			</DCCReference>
+			<DCCReference Include="FFilterEnDev.pas">
+				<Form>frmFilterEnDev</Form>
+			</DCCReference>
+			<DCCReference Include="FSubParamEdit.pas">
+				<Form>frmSubParamEdit</Form>
+			</DCCReference>
+			<DCCReference Include="FSubParamsNoDev.pas">
+				<Form>frmSubParamsNoDev</Form>
+			</DCCReference>
+			<DCCReference Include="childwin.pas">
+				<Form>MDIChild</Form>
+			</DCCReference>
+			<DCCReference Include="Common.pas"/>
+			<DCCReference Include="Globals0.pas"/>
+			<DCCReference Include="DSysSubParams.pas">
+				<Form>DMSysSubParams</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FBaseDev0.pas">
+				<Form>frmBaseDev0</Form>
+			</DCCReference>
+			<DCCReference Include="CustomerD.pas">
+				<Form>CustomerDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TerminalD.pas">
+				<Form>TerminalDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Terminal.pas">
+				<Form>frmTerminal</Form>
+			</DCCReference>
+			<DCCReference Include="StationD.pas">
+				<Form>StationDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MerchantD.pas">
+				<Form>MerchantDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Merchant.pas">
+				<Form>frmMerchant</Form>
+			</DCCReference>
+			<DCCReference Include="DMerStaCustSubs.pas">
+				<Form>DMMerStaCust</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Customer.pas"/>
+			<DCCReference Include="UDBLookupComboBoxLeo.pas"/>
+			<DCCReference Include="ACard.pas">
+				<Form>frmACard</Form>
+			</DCCReference>
+			<DCCReference Include="Tran.pas">
+				<Form>frmTran</Form>
+			</DCCReference>
+			<DCCReference Include="TranD.pas">
+				<Form>TranDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="UserDialog.pas">
+				<Form>UserDialog</Form>
+			</DCCReference>
+			<DCCReference Include="ImportStd.pas">
+				<Form>frmImportStd</Form>
+			</DCCReference>
+			<DCCReference Include="Station.pas">
+				<Form>frmStation</Form>
+			</DCCReference>
+			<DCCReference Include="SPGetSid.pas"/>
+			<DCCReference Include="FGenMaintDev.pas">
+				<Form>frmGenMaintDev</Form>
+			</DCCReference>
+			<DCCReference Include="DTransAll.pas">
+				<Form>DMTransAll</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ExportBlackList.pas"/>
+			<DCCReference Include="ExportNew.pas">
+				<Form>frmExportNew</Form>
+			</DCCReference>
+			<DCCReference Include="RNewCards.pas">
+				<Form>rptNewCards</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FPrnBase.pas">
+				<Form>FrmPrnBase</Form>
+			</DCCReference>
+			<DCCReference Include="FPrnTran.pas">
+				<Form>frmPrnTran</Form>
+			</DCCReference>
+			<DCCReference Include="DPrnTrans.pas">
+				<Form>DMPrnTrans</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RBaseAvinCard.pas">
+				<Form>rptBaseAvinCard</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FEnhmTranPro.pas"/>
+			<DCCReference Include="DEnhmTrans.pas">
+				<Form>DMEnhmTrans</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FEnhmDaily.pas">
+				<Form>frmFEnhmDaily</Form>
+			</DCCReference>
+			<DCCReference Include="FEnhmTran.pas">
+				<Form>frmFEnhmTran</Form>
+			</DCCReference>
+			<DCCReference Include="CommonOut2000.pas"/>
+			<DCCReference Include="FEnhmTransCom.pas">
+				<Form>frmEnhmTransCom</Form>
+			</DCCReference>
+			<DCCReference Include="FEnhmTransComPro.pas"/>
+			<DCCReference Include="FEnhmEmployees.pas">
+				<Form>frmEnhmEmployees</Form>
+			</DCCReference>
+			<DCCReference Include="DSelCust.pas">
+				<Form>DMSelCust</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSelACard.pas">
+				<Form>DMSelAcard</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FPrnCustomer.pas">
+				<Form>frmPrnCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="rCustomer1.pas">
+				<Form>rptCustomer1</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rCustomer2.pas">
+				<Form>rptCustomer2</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FPrnACard.pas">
+				<Form>frmPrnACard</Form>
+			</DCCReference>
+			<DCCReference Include="rApostolhDet.pas">
+				<Form>rptApostolhDet</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rApostolh.pas">
+				<Form>rptApostolh</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rApostolh00.pas">
+				<Form>rptApostolh00</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rAcardGrComp.pas">
+				<Form>rptAcardGrComp</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rAcardGrComp1.pas">
+				<Form>rptAcardGrComp1</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs1.pas">
+				<Form>rptKinhs1</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs3.pas">
+				<Form>rptKinhs3</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RKinhs9.pas">
+				<Form>rptKinhs9</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs4.pas">
+				<Form>rptKinhs4</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs8.pas">
+				<Form>rptKinhs8</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs6.pas">
+				<Form>rptKinhs6</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DConsum.pas">
+				<Form>DMConsum</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RLastCallDate.pas">
+				<Form>rptLastCallDate</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FPrnStationCalendarPro.pas">
+				<Form>frmPrnStationCallendarPro</Form>
+			</DCCReference>
+			<DCCReference Include="DPrnStatCall.pas">
+				<Form>DMPrnStatCall</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FInsApproval.pas">
+				<Form>frmInsApproval</Form>
+			</DCCReference>
+			<DCCReference Include="DispCardData.pas">
+				<Form>FrmDispCardData</Form>
+			</DCCReference>
+			<DCCReference Include="DispCardDataDM.pas">
+				<Form>DispCardDataDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DispStatDataDM.pas">
+				<Form>DispStatDataDM</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DispStatData.pas">
+				<Form>frmDispStatData</Form>
+			</DCCReference>
+			<DCCReference Include="DispCompDataDM.pas">
+				<Form>DMDispCompData</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DispCompData.pas">
+				<Form>frmDispCompData</Form>
+			</DCCReference>
+			<DCCReference Include="ExportNewTerminal.pas">
+				<Form>frmExportNewTerminal</Form>
+			</DCCReference>
+			<DCCReference Include="FEnhmStPel.pas">
+				<Form>frmFEnhmStPel</Form>
+			</DCCReference>
+			<DCCReference Include="FEnhmParak.pas">
+				<Form>frmFEnhmParak</Form>
+			</DCCReference>
+			<DCCReference Include="FEnhmDiscount.pas">
+				<Form>frmFEnhmDiscount</Form>
+			</DCCReference>
+			<DCCReference Include="uAutoComplete.pas"/>
+			<DCCReference Include="FPrnTranEmpPro.pas">
+				<Form>frmPrnTranEmpPrologue</Form>
+			</DCCReference>
+			<DCCReference Include="FPrnTranEmp.pas">
+				<Form>frmPrnTranEmp</Form>
+			</DCCReference>
+			<DCCReference Include="DPrnTransEmp.pas">
+				<Form>DMPrnTransEmp</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RKinhs13.pas">
+				<Form>rptKinhs13</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RKinhs12.pas">
+				<Form>rptKinhs12</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs16.pas">
+				<Form>rptkinhs16</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs22.pas">
+				<Form>rptKinhs22</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DCheckTools.pas">
+				<Form>DMCheckTools</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs11.pas">
+				<Form>rptKinhs11</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs32.pas">
+				<Form>rptKinhs32</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs32In.pas">
+				<Form>rptKinhs32In</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhsKK88.pas">
+				<Form>rptKinhsKK88</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhsKK22.pas">
+				<Form>rptKinhsKK22</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RKinhsKK9.pas">
+				<Form>rptKinhsKK9</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhsKK3.pas">
+				<Form>rptKinhsKK3</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhsKK8.pas">
+				<Form>rptKinhsKK8</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FKinhsKK88a.pas">
+				<Form>frmKinhsKK88a</Form>
+			</DCCReference>
+			<DCCReference Include="FViewPdf.pas">
+				<Form>frmViewPdf</Form>
+			</DCCReference>
+			<DCCReference Include="XMLSerializer.pas"/>
+			<DCCReference Include="FInsertVariant.pas">
+				<Form>frmInsertVariant</Form>
+			</DCCReference>
+			<DCCReference Include="FSelectVariant.pas">
+				<Form>frmSelectVariant</Form>
+			</DCCReference>
+			<DCCReference Include="FBasePrnDev0.pas">
+				<Form>frmBasePrnDev0</Form>
+			</DCCReference>
+			<DCCReference Include="rKinhs15.pas">
+				<Form>rptKinhs15</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RImport.pas">
+				<Form>rptImport</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs3Mer.pas">
+				<Form>rptKinhs3Mer</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FEnhmParakStation.pas">
+				<Form>frmFEnhmParakStation</Form>
+			</DCCReference>
+			<DCCReference Include="RKinhsMisth.pas">
+				<Form>rptKinhsMisth</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="PrnStationCalendar.pas">
+				<Form>frmPrnStationCalendar</Form>
+			</DCCReference>
+			<DCCReference Include="RTrCallDet0.pas">
+				<Form>rptTrCallDet0</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RTrCallDet1.pas">
+				<Form>rptTrCallDet1</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSubParams11.pas">
+				<Form>DMSubParams11</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSubParams00.pas">
+				<Form>DMSubParams00</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ImportStdTrCall.pas">
+				<Form>frmImportStdTrCall</Form>
+			</DCCReference>
+			<DCCReference Include="FPopUp.pas">
+				<Form>frmPopUp</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="rKinhs5.pas">
+				<Form>rptKinhs5</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="rKinhs43.pas"/>
+			<DCCReference Include="FDummy.pas">
+				<Form>frmDummy</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="ApplicationInfo.pas"/>
+			<DCCReference Include="fGMapMain.pas">
+				<Form>frmGMapMain</Form>
+			</DCCReference>
+			<DCCReference Include="DMainScreen.pas">
+				<Form>DMMainScreen</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FPersonDet.pas">
+				<Form>frmPersonDet</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FOurCarsDet.pas">
+				<Form>frmOurCarsDet</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FOtherCarsDet.pas">
+				<Form>frmOtherCarsDet</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FBaseDev1.pas">
+				<Form>frmBaseDev1</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="DPersonDet.pas">
+				<Form>DMPersonDet</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DOurCarsDet.pas">
+				<Form>DMOurCarsDet</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DOtherCarsDet.pas">
+				<Form>DMOtherCarsDet</Form>
+				<FormType>dfm</FormType>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FSelectLib.pas">
+				<Form>frmSelectLib</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FBaseRep.pas">
+				<Form>frmBaseRep</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FBRPersons.pas">
+				<Form>frmBRPersons</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FBROur.pas">
+				<Form>frmBROur</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FMainScreen.pas">
+				<Form>frmMainScreen</Form>
+			</DCCReference>
+			<DCCReference Include="FPrnTranPro.pas">
+				<Form>frmPrnTranPrologue</Form>
+			</DCCReference>
+			<DCCReference Include="FBaseSel.pas">
+				<Form>frmBaseSel</Form>
+			</DCCReference>
+			<DCCReference Include="FMembersSel.pas">
+				<Form>frmMembersSel</Form>
+			</DCCReference>
+			<DCCReference Include="FSelPersons.pas">
+				<Form>frmSelPersons</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FSelOther.pas">
+				<Form>frmSelOther</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FSelOur.pas">
+				<Form>frmSelOur</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FBROther.pas">
+				<Form>frmBROther</Form>
+			</DCCReference>
+			<DCCReference Include="FChangePass.pas">
+				<Form>frmChangePass</Form>
+			</DCCReference>
+			<DCCReference Include="Calculator.pas"/>
+			<DCCReference Include="execalc(1)\CCALC.PAS"/>
+			<DCCReference Include="execalc(1)\CCALC2.PAS">
+				<Form>TheCalculator</Form>
+			</DCCReference>
+			<DCCReference Include="FSelectPersons.pas">
+				<Form>frmSelectPersons</Form>
+			</DCCReference>
+			<DCCReference Include="FSelectOur.pas"/>
+			<DCCReference Include="FSelectOther.pas">
+				<Form>frmSelectOther</Form>
+			</DCCReference>
+			<DCCReference Include="FBrLibro.pas">
+				<Form>frmBrLibro</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FBrLibro0.pas">
+				<Form>frmBrLibro0</Form>
+			</DCCReference>
+			<DCCReference Include="FCheckLib.pas">
+				<Form>frmCheckLib</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="DWorkersDet.pas">
+				<Form>DMWorkersDet</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FWorkersDet.pas">
+				<Form>frmWorkersDet</Form>
+			</DCCReference>
+			<DCCReference Include="FBRWorkers.pas">
+				<Form>frmBRWorkers</Form>
+			</DCCReference>
+			<DCCReference Include="FSelectWorkers.pas">
+				<Form>frmSelectWorkers</Form>
+			</DCCReference>
+			<DCCReference Include="DSubParams22.pas">
+				<Form>DMSubParams22</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="DSubParams33.pas">
+				<Form>DMSubParams33</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FDailyReport.pas">
+				<Form>FrmDailyReport</Form>
+			</DCCReference>
+			<DCCReference Include="FInsertDailyReport.pas">
+				<Form>frmInsertDailyReport</Form>
+			</DCCReference>
+			<DCCReference Include="rDailyReport.pas">
+				<Form>rptDailyReport</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FAddWorker.pas">
+				<Form>frmAddWorker</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="FAddWorkersBatch.pas">
+				<Form>frmAddWorkersBatch</Form>
+			</DCCReference>
+			<DCCReference Include="FWorkPermits.pas">
+				<Form>frmWorkPermits</Form>
+			</DCCReference>
+			<DCCReference Include="DWorkPermits.pas">
+				<Form>DMWorkPermits</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="RWorkPermitReport.pas">
+				<Form>rptWorkPermitReport</Form>
+				<DesignClass>TQuickRep</DesignClass>
+			</DCCReference>
+			<DCCReference Include="FBRWorkPermits.pas">
+				<Form>frmBRWorkPermits</Form>
+			</DCCReference>
+			<None Include="Profiling\AQtimeModule1.aqt"/>
+			<None Include="ToDo Part1.txt"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">GateKeeper.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<Language>
+						<Language Name="ProjectLang">$00000408</Language>
+					</Language>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">2</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1032</VersionInfo>
+						<VersionInfo Name="CodePage">1253</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Avin</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">2.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">Avin</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">Avin Oil</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">Avin Oil</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">AvinSinpStat</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">Sinp Stat</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\Embarcadero\Components\LeoSapAdobe.dpk_Lib\Win32\Release\SapUnit.bpl">SapUnit</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2K160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\qrdBDE_DXE2.bpl">QRDesign BDE Datasets</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\Developer Express.VCL\Library\RS16\dcldxSpreadSheetRS16.bpl">ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win64">True</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>False</ModelSupport>
+				<ActiveXProjectInfo>
+					<version>1</version>
+				</ActiveXProjectInfo>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>
